@@ -2,14 +2,14 @@
 set -e
 
 # Generate the password the first time
-btc_init 2>/dev/null
-eval `grep rpcpassword $HOME/.bitcoin/bitcoin.conf`
+grs_init 2>/dev/null
+eval `grep rpcpassword $HOME/.groestlcoin/groestlcoin.conf`
 rpcpassword1=$rpcpassword
 
 # Generate the password again
-rm ~/.bitcoin/bitcoin.conf
-btc_init 2>/dev/null
-eval `grep rpcpassword $HOME/.bitcoin/bitcoin.conf`
+rm ~/.groestlcoin/groestlcoin.conf
+grs_init 2>/dev/null
+eval `grep rpcpassword $HOME/.groestlcoin/groestlcoin.conf`
 rpcpassword2=$rpcpassword
 
 

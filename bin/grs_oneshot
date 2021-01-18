@@ -2,8 +2,8 @@
 
 set -ex
 
-# Generate bitcoin.conf
-btc_init
+# Generate groestlcoin.conf
+grs_init
 
 # Default / no argument invocation listens for RPC commands and has to accept non-localhost because of
 # docker port proxying or docker private networking.
@@ -11,4 +11,4 @@ if [ $# -eq 0 ]; then
     set -- "-rpcbind=" "-rpcallowip=::/0"
 fi
 
-exec bitcoind "$@"
+exec groestlcoind "$@"
