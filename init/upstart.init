@@ -8,8 +8,8 @@ pre-start script
   docker rm -f groestlcoind-node || true
 
   # Attempt to always update and fail silently if the network isn't ready
-  docker pull Groestlcoin/groestlcoind || true
+  docker pull groestlcoin/groestlcoind || true
 end script
 script
-  exec docker run --rm -v groestlcoind-data:/groestlcoin --name=groestlcoind-node --rm -p 1331:1331 -p 127.0.0.1:1441:1441 Groestlcoin/groestlcoind
+  exec docker run --rm -v groestlcoind-data:/groestlcoin --name=groestlcoind-node --rm -p 1331:1331 -p 127.0.0.1:1441:1441 groestlcoin/groestlcoind
 end script

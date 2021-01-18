@@ -14,7 +14,7 @@
 
 *Note:* This container will be run in the same way as the groestlcoind node, but will not connect to already running containers or processes.
 
-    docker run -v groestlcoind-data:/groestlcoin --rm -it Groestlcoin/groestlcoind bash -l
+    docker run -v groestlcoind-data:/groestlcoin --rm -it groestlcoin/groestlcoind bash -l
 
 You can also attach bash into running container to debug running groestlcoind
 

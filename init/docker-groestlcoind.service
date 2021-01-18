@@ -11,7 +11,7 @@ Restart=always
 # Modify IP6_PREFIX to match network config
 Environment="NAME=groestlcoind"
 Environment="DATA_VOL=groestlcoind-data"
-Environment="IMG=Groestlcoin/groestlcoind:dev"
+Environment="IMG=groestlcoin/groestlcoind:dev"
 Environment="PORT=1331:1331/tcp"
 
 # To override environment variables, use local configuration directory:

@@ -10,7 +10,7 @@ You can use environment variables to customize config ([see docker run environme
             -e PRINTTOCONSOLE=1 \
             -e RPCUSER=mysecretrpcuser \
             -e RPCPASSWORD=mysecretrpcpassword \
-            Groestlcoin/groestlcoind
+            groestlcoin/groestlcoind
 
 Or you can use your very own config file like that:
 
@@ -18,4 +18,4 @@ Or you can use your very own config file like that:
             -p 1331:1331 \
             -p 127.0.0.1:1441:1441 \
             -v /etc/mygroestlcoin.conf:/groestlcoin/.groestlcoin/groestlcoin.conf \
-            Groestlcoin/groestlcoind
+            groestlcoin/groestlcoind

@@ -4,7 +4,7 @@
 #
 set -ex
 
-GRS_IMAGE=${GRS_IMAGE:-Groestlcoin/groestlcoind}
+GRS_IMAGE=${GRS_IMAGE:-groestlcoin/groestlcoind}
 
 distro=$1
 shift
