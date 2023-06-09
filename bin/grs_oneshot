@@ -6,9 +6,11 @@ set -ex
 grs_init
 
 # Default / no argument invocation listens for RPC commands and has to accept non-localhost because of
-# docker port proxying or docker private networking.
+# Docker port proxying or Docker private networking.
 if [ $# -eq 0 ]; then
-    set -- "-rpcbind=" "-rpcallowip=::/0"
+    # If IPv6 is in the container do both:
+    #set -- '-rpcbind=[::]:8332' '-rpcallowip=::/0' '-rpcallowip=0.0.0.0/0'
+    set -- '-rpcbind=:8332' '-rpcallowip=0.0.0.0/0'
 fi
 
 exec groestlcoind "$@"

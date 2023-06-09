@@ -1,6 +1,9 @@
 Groestlcoind for Docker
 ===================
 
+[![Docker Stars](https://img.shields.io/docker/stars/groestlcoin/groestlcoind.svg)](https://hub.docker.com/r/groestlcoin/groestlcoind/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/groestlcoin/groestlcoind.svg)](https://hub.docker.com/r/groestlcoin/groestlcoind/)
+
 Docker image that runs the Groestlcoin groestlcoind node in a container for easy deployment.
 
 
@@ -26,7 +29,7 @@ Quick Start
 1. Create a `groestlcoind-data` volume to persist the groestlcoind blockchain data, should exit immediately.  The `groestlcoind-data` container will store the blockchain when the node container is recreated (software upgrade, reboot, etc):
 
         docker volume create --name=groestlcoind-data
-        docker run -v groestlcoind-data:/groestlcoin --name=groestlcoind-node -d \
+        docker run -v groestlcoind-data:/groestlcoin/.groestlcoin --name=groestlcoind-node -d \
             -p 1331:1331 \
             -p 127.0.0.1:1441:1441 \
             groestlcoin/groestlcoind
