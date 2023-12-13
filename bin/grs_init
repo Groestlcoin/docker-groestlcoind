@@ -14,7 +14,7 @@ if [ ! -e "$HOME/.groestlcoin/groestlcoin.conf" ]; then
 regtest=${REGTEST:-0}
 disablewallet=${DISABLEWALLET:-1}
 printtoconsole=${PRINTTOCONSOLE:-1}
-rpcuser=${RPCUSER:-bitcoinrpc}
+rpcuser=${RPCUSER:-groestlcoinrpc}
 rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
 EOF
 
