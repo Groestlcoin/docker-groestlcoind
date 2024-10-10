@@ -16,7 +16,7 @@ RUN apt update \
     wget \
     && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ARG VERSION=27.0
+ARG VERSION=28.0
 ARG GROESTLCOIN_CORE_SIGNATURE=287AE4CA1187C68C08B49CB2D11BD4F33F1DB499
 
 # Don't use base image's groestlcoin package for a few reasons:
@@ -49,7 +49,8 @@ WORKDIR /groestlcoin
 
 ARG GROUP_ID=1000
 ARG USER_ID=1000
-RUN groupadd -g ${GROUP_ID} groestlcoin \
+RUN userdel ubuntu \
+    && groupadd -g ${GROUP_ID} groestlcoin \
     && useradd -u ${USER_ID} -g groestlcoin -d /groestlcoin groestlcoin
 
 COPY --from=builder /opt/ /opt/
