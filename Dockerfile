@@ -16,7 +16,7 @@ RUN apt update \
     wget \
     && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ARG VERSION=28.0
+ARG VERSION=29.0
 ARG GROESTLCOIN_CORE_SIGNATURE=287AE4CA1187C68C08B49CB2D11BD4F33F1DB499
 
 # Don't use base image's groestlcoin package for a few reasons:
@@ -42,7 +42,7 @@ FROM ubuntu:latest
 LABEL maintainer="Groestlcoin developers <groestlcoin@gmail.com>"
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-ENV HOME /groestlcoin
+ENV HOME=/groestlcoin
 EXPOSE 1441 1331
 VOLUME ["/groestlcoin/.groestlcoin"]
 WORKDIR /groestlcoin

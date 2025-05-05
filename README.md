@@ -40,7 +40,7 @@ Quick Start
         CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS              PORTS                                              NAMES
         d0e1076b2dca        groestlcoin/groestlcoind:latest     "grs_oneshot"       2 seconds ago       Up 1 seconds        127.0.0.1:1441->1441/tcp, 0.0.0.0:1331->1331/tcp   groestlcoind-node
 
-3. You can then access the daemon's output thanks to the [docker logs command]( https://docs.docker.com/reference/commandline/cli/#logs)
+3. You can then access the daemon's output thanks to the [docker logs command](https://docs.docker.com/reference/cli/docker/service/logs/)
 
         docker logs -f groestlcoind-node
 
